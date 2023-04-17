@@ -141,7 +141,7 @@ public class JwtAuthenticationController {
 		String token = jwtBlacklistFilter.extractToken(request);
 		tokenBlacklistService.addToBlacklist(token);
 
-		logger.info("Logout processing...");
+		logger.info("Logout User");
 		Map<String, Object> response = new HashMap<>();
 		response.put("message", "Logout Successful!");
 		return ResponseEntity.ok(response);
